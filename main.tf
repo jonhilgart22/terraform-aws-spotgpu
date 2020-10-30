@@ -128,6 +128,12 @@ resource "aws_spot_instance_request" "jh_dl_custom_spot" {
   count                       = var.num_instances
   security_groups             = [aws_default_security_group.main_vpc_security_group.id]
   subnet_id                   = aws_subnet.main_vpc_subnet.id
+  block_duration_minutes      = var.block_duration_minutes
+
+  root_block_device {
+    volume_size = var.ebs_volume_size
+  }
+
   # ebs_block_device = [{
   #   device_name = "/dev/sdh"
   #   volume_size = var.ebs_volume_size
