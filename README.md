@@ -31,6 +31,7 @@ taking advantage of automation and friendly declarative configurations.
       - [Terraform](#terraform)
       - [Deep Learning on AWS](#deep-learning-on-aws)
   - [License](#license)
+  - [Personal Notes](#personal-notes)
 
 ## Requirements
 * [Terraform](https://www.terraform.io/) (tested on v0.11.7)
@@ -180,3 +181,7 @@ Options](https://medium.com/initialized-capital/benchmarking-tensorflow-performa
 ## License
 [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/)
 (See LICENSE for full details).
+
+## Personal Notes
+
+This ec2 is setup with the  ~/.ssh/aws-services.pem  key.
