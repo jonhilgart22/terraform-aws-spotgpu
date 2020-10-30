@@ -23,3 +23,8 @@ output "spot_request_state" {
   description = "The state of the AWS EC2 Spot Instance request(s)."
   value       = ["${aws_spot_instance_request.jh_dl_custom_spot.*.spot_request_state}"]
 }
+
+output "public_dns" {
+  description = "The  public dns."
+  value       = ["${aws_spot_instance_request.jh_dl_custom_spot.*.public_dns}"]
+}

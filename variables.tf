@@ -32,7 +32,7 @@ variable "my_cidr_block" {
 
 variable "my_key_pair_name" {
   type        = string
-  default     = "twitter-streaming"
+  default     = "aws-services"
   description = "The name of the SSH key to install onto the instances."
 }
 
@@ -62,7 +62,7 @@ variable "ebs_volume_size" {
 
 variable "ami_id" {
   type        = string
-  default     = "ami-4c5c6e29" # Default AWS Deep Learning AMI (Ubuntu)
+  default     = "ami-01aad86525617098d" # Default AWS Deep Learning AMI (Ubuntu)
   description = "The AMI ID to use for each instance. The AMI ID will be different depending on the region, even though the name is the same."
 }
 
@@ -71,3 +71,18 @@ variable "num_instances" {
   default     = "1"
   description = "The number of AWS EC2 instances to provision."
 }
+
+
+variable "ebs_size_gb" {
+  type        = string
+  default     = "10"
+  description = "The size of ebs block storae in gb."
+}
+
+
+variable "black_duration_minutes" {
+  type        = string
+  default     = "120"
+  description = "The number of minutes to have this ec2 running. Needs to be multiples of 60"
+}
+

@@ -30,7 +30,6 @@ taking advantage of automation and friendly declarative configurations.
   - [Other resources](#other-resources)
       - [Terraform](#terraform)
       - [Deep Learning on AWS](#deep-learning-on-aws)
-  - [Authors](#authors)
   - [License](#license)
 
 ## Requirements
@@ -72,7 +71,7 @@ setup are:
     * num_instances             (default = 1)
     * spot_price                (default = 0.30)
     * ebs_volume_size           (default = 1)
-    * ami_id                    (default = ami-dff741a0)    # AWS Deep Learning AMI (Ubuntu)
+    * ami_id                    (default = ami-01aad86525617098d)    # AWS Deep Learning AMI (Ubuntu) us-east-1
 ```
 
 **Note: The minimum spotPrice should follow the [AWS EC2 Spot Instances
@@ -177,9 +176,6 @@ cluster and run a service on the cluster
 instruction](https://hackernoon.com/keras-with-gpu-on-amazon-ec2-a-step-by-step-instruction-4f90364e49ac)
 * [Benchmarking Tensorflow Performance and Cost Across Different GPU
 Options](https://medium.com/initialized-capital/benchmarking-tensorflow-performance-and-cost-across-different-gpu-options-69bd85fe5d58)
-
-## Authors
-Module is maintained by [Vithursan Thangarasa](https://github.com/vithursant)
 
 ## License
 [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/)
