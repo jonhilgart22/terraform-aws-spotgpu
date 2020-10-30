@@ -184,4 +184,5 @@ Options](https://medium.com/initialized-capital/benchmarking-tensorflow-performa
 
 ## Personal Notes
 
-This ec2 is setup with the  ~/.ssh/aws-services.pem  key.
+1. This ec2 is setup with the  ~/.ssh/aws-services.pem  key.
+2. Sync local code to server with `rrsync -avz -e ssh ~/.ssh/aws-services.pem  . "ubuntu@ubuntu@ec2-34-238-220-223.compute-1.amazonaws.com"`
