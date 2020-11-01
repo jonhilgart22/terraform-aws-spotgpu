@@ -15,8 +15,8 @@ variable "my_region" {
 
 variable "avail_zone" {
   type        = string
-  default     = "us-east-1a"
-  description = "The AWS availability zone location within the selected region (i.e. us-east-2a)."
+  default     = "us-east-1b"
+  description = "The AWS availability zone location within the selected region (i.e. us-east-1a)."
 }
 
 # only use if want to restrict to my ip
@@ -43,20 +43,20 @@ variable "ssh-key-dir" {
 
 variable "instance_type" {
   type        = string
-  default     = "p2.xlarge"
+  default     = "g3s.xlarge" # "p2.xlarge" price about $.50/hr, # g3s.xlarge $.50 per hour
   description = "The instance type to provision the instances from (i.e. p2.xlarge)."
 
 }
 
 variable "spot_price" {
   type        = string
-  default     = "0.40"
+  default     = "0.50"
   description = "The maximum hourly price (bid) you are willing to pay for the specified instance, i.e. 0.10. This price should not be below AWS' minimum spot price for the instance based on the region."
 }
 
 variable "ebs_volume_size" {
   type        = string
-  default     = "10"
+  default     = "100"
   description = "The Amazon EBS volume size (1 GB - 16 TB)."
 }
 
@@ -72,17 +72,9 @@ variable "num_instances" {
   description = "The number of AWS EC2 instances to provision."
 }
 
-
-variable "ebs_size_gb" {
+variable "block_duration_minutes" {
   type        = string
-  default     = "10"
-  description = "The size of ebs block storae in gb."
-}
-
-
-variable "black_duration_minutes" {
-  type        = string
-  default     = "120"
+  default     = "360"
   description = "The number of minutes to have this ec2 running. Needs to be multiples of 60"
 }
 

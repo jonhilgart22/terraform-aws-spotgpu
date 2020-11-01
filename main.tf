@@ -134,11 +134,6 @@ resource "aws_spot_instance_request" "jh_dl_custom_spot" {
     volume_size = var.ebs_volume_size
   }
 
-  # ebs_block_device = [{
-  #   device_name = "/dev/sdh"
-  #   volume_size = var.ebs_volume_size
-  #   volume_type = "gp2"
-  # }]
   tags = {
     Name = "jh_dl_custom_spot"
   }

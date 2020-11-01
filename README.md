@@ -32,6 +32,7 @@ taking advantage of automation and friendly declarative configurations.
       - [Deep Learning on AWS](#deep-learning-on-aws)
   - [License](#license)
   - [Personal Notes](#personal-notes)
+  - [Find the public DNS](#find-the-public-dns)
 
 ## Requirements
 * [Terraform](https://www.terraform.io/) (tested on v0.11.7)
@@ -184,7 +185,12 @@ Options](https://medium.com/initialized-capital/benchmarking-tensorflow-performa
 
 ## Personal Notes
 
+There are two instancd types to try. The yare defined in the `variables.tf` file.
+
 1. This ec2 is setup with the  ~/.ssh/aws-services.pem  key.
 2. If you want to connect with vscode, find the public DNS of the ec2, and add it to the ssh configuration file (bottom left button)
-3. Sync local code to server with `rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/aws-services.pem" --progress . ubuntu@ec2-18-215-14-9.compute-1.amazonaws.com:~/`
+3. Sync local code to server with `rsync -avz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -i ~/.ssh/aws-services.pem" --progress . ubuntu@ec2-54-175-106-45.compute-1.amazonaws.com:~/`
   
+  ## Find the public DNS
+  - ` aws ec2 describe-instances `
+
